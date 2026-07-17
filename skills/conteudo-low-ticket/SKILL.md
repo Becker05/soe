@@ -68,7 +68,7 @@ O produto ensina a montar essa estrutura de rastreamento e mensuração — GTM 
 - Nunca atacar a Meta, o Google, o TikTok.
 - Nunca dizer que uma plataforma mente.
 
-Elas não mentem — cada uma atribui segundo a própria janela, modelo e regra. O gerenciador de anúncios é **parte interessada**: mede o próprio trabalho e vende mídia. Isso **não é mentira, é conflito de interesse** — e é justo explicar isso com precisão, sem acusar. É a diferença entre "a Meta te engana" (proibido) e "a Meta atribui pelo método dela, que favorece o anúncio" (permitido).
+Cada fonte atribui segundo a própria janela, modelo e regra. O gerenciador de anúncios é **parte interessada**: mede o próprio trabalho e vende mídia. Isso é conflito de interesse, não prova de mentira ou manipulação. Explique a diferença com precisão, sem transformar a plataforma em inimiga.
 
 ### O verdadeiro vilão
 
@@ -94,13 +94,12 @@ Isso não faz o GA4 "a verdade" — faz dele uma fonte confiável o suficiente p
 
 | ❌ Nunca escreva | ✅ Escreva |
 |---|---|
-| "A Meta mente / o Google engana" | "A Meta atribui pela janela e pelo modelo dela — não é mentira, é o método dela" |
-| "Todo mundo mente, ninguém sabe de nada" | "Cada fonte conta uma parte; sem estrutura você não sabe qual pergunta cada uma responde" |
-| "O GA4 revela a verdade" | "O GA4 bem configurado ajuda a **reconciliar** as fontes" |
-| "O GA4 é a única fonte que não mente" | "Nenhuma fonte é a verdade sozinha — a segurança vem de reconciliar" |
-| "Não confie em nenhum painel" | "Confie numa **estrutura** que reconcilia os painéis" |
-| "Nenhuma ferramenta resolve" | "A estrutura resolve — as ferramentas são o mecanismo" |
-| "Some os painéis, o total dá errado" (sem herói) | "…e é por isso que existe uma estrutura que reconcilia as fontes: pra você decidir com segurança" |
+| Acusar uma plataforma de falsificar o resultado | “Cada fonte atribui pela própria janela e pelo próprio modelo.” |
+| Tratar todas as fontes como erradas | “Cada fonte conta uma parte; sem estrutura você não sabe qual pergunta cada uma responde.” |
+| Apresentar o GA4 como verdade absoluta | “O GA4 bem configurado ajuda a **reconciliar** as fontes.” |
+| Mandar desconfiar de todo painel | “Confie numa **estrutura** que reconcilia os painéis.” |
+| Dizer que nenhuma ferramenta resolve | “A estrutura resolve; as ferramentas são o mecanismo.” |
+| Expor a contradição sem mostrar o herói | “É por isso que existe uma estrutura que reconcilia as fontes: para você decidir com segurança.” |
 
 ### O teste dos 3 segundos — rode ANTES de entregar
 
@@ -125,8 +124,8 @@ Isso é uma promessa vendável, calma e defensável. "Todo mundo mente" não é.
 ## ⛔ REGRA DE CTA — bloqueante
 
 ### Nunca prometa prazo de implantação
-**Proibido:** "em 7 dias", "em 24 horas", "em uma semana", ou qualquer prazo para o resultado/implantação.
-Dizer "em 7 dias" faz o leitor entender que **vai levar uma semana pra funcionar** — o oposto da promessa real, que é: a configuração leva **horas**, não dias. Prazo no CTA cria objeção de esforço onde não existe nenhuma.
+
+Não associe a implantação ou o resultado a um prazo específico. A promessa é a capacidade de ler e decidir com segurança, não a velocidade da transformação. Prazo no CTA cria uma expectativa artificial e desvia o posicionamento.
 
 **Se o slide ou a legenda contiver qualquer promessa de prazo → REESCREVA.**
 
@@ -143,7 +142,7 @@ Apoio:   [o benefício concreto, em capacidade — nunca em prazo]
 Botão:   Link na bio →
 ```
 
-**O apoio promete capacidade, não velocidade.** "Você passa a ver de onde cada venda veio", não "em 7 dias você vê".
+**O apoio promete capacidade, não velocidade.** Exemplo: “Você passa a ver de onde cada venda veio.”
 
 ---
 

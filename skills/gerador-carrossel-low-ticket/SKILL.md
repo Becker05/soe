@@ -27,13 +27,13 @@ description: >
 
 A plataforma **nunca** é a vilã: nunca atacar Meta/Google/TikTok, nunca dizer que uma plataforma mente. O gerenciador é parte interessada (mede o próprio trabalho) — isso é conflito de interesse, não mentira. Nenhuma fonte é a verdade absoluta, nem o GA4: o herói é a reconciliação, não uma ferramenta.
 
-### PARE e não renderize se algum slide disser:
+### PARE e não renderize se algum slide:
 
-- ❌ "A Meta mente / o Google engana" → ✅ "A Meta atribui pelo método dela — não é mentira, é o modelo dela"
-- ❌ "Todo mundo mente / os dois estão errados" → ✅ "Cada fonte responde uma pergunta diferente; sem estrutura você decide no escuro"
-- ❌ "O GA4 revela a verdade / é a única fonte sem interesse" → ✅ "O GA4 bem configurado ajuda a **reconciliar** as fontes"
-- ❌ "Não confie em nenhum painel" → ✅ "Confie numa **estrutura** que reconcilia os painéis"
-- ❌ CTA que não nomeia a saída → ✅ CTA que diz **com o quê** o problema se resolve: métricas confiáveis / a Cartilha
+- acusa uma plataforma de mentir ou manipular → explique que cada fonte atribui pelo próprio método;
+- trata todas as fontes como erradas → mostre que cada uma responde uma pergunta diferente;
+- apresenta o GA4 como verdade absoluta → posicione-o como parte da reconciliação;
+- manda desconfiar de todo painel → ofereça uma estrutura que reconcilia os painéis;
+- usa CTA sem nomear a saída → diga com o quê o problema se resolve: métricas confiáveis / a Cartilha.
 
 Ao encontrar violação: **aponte a contradição pro Artur, proponha a correção, e só renderize depois do OK dele.** Renderizar uma copy que queima a oferta custa mais caro que atrasar o post.
 
@@ -56,11 +56,11 @@ O arco cromático do carrossel deve virar de vermelho para verde **exatamente no
 
 ## ⛔ REGRA DE CTA — checar ANTES de renderizar
 
-**Nunca renderize um slide ou legenda com promessa de prazo** — "em 7 dias", "em 24 horas", "em uma semana". Faz o leitor entender que vai levar uma semana pra funcionar; a configuração leva **horas**. Prazo cria objeção de esforço onde não existe.
+**Nunca renderize um slide ou legenda com promessa de prazo.** Prazo cria uma expectativa artificial sobre implantação ou resultado e desvia a promessa da capacidade entregue.
 
 **O slide de CTA nomeia o produto em texto:** rótulo `CARTILHA DAS MÉTRICAS REAIS` + o nome no apoio. "Link na bio" sozinho é endereço, não CTA.
 
-**O apoio promete capacidade, não velocidade.** ✅ "você passa a ver de onde cada venda veio" · ❌ "em 7 dias você vê".
+**O apoio promete capacidade, não velocidade.** Exemplo: “você passa a ver de onde cada venda veio”.
 
 Copy com prazo ou sem o produto nomeado → **não renderize**.
 
@@ -137,10 +137,19 @@ Transforma um tema/copy em **carrossel renderizado**: JPGs 1080x1350 com a ident
 0. **Pergunte a fonte do conteúdo.** Se o pedido já não deixar claro, pergunte antes de qualquer coisa (uma pergunta só, com as opções): **(a)** o usuário tem uma ideia/tema na cabeça, **(b)** ele vai passar o link de uma página do Notion com o conteúdo (ex.: pauta da semana), ou **(c)** puxar da base "Conteúdo Low Ticket" o próximo item planejado. Se ele mandar um link do Notion junto do pedido, NÃO pergunte — busque a página (Notion fetch), extraia tema/copy/funil dela e siga. Se a página do Notion já tiver copy pronta, use-a como base (ajustando pro formato dos slides) em vez de escrever do zero.
 1. **Copy primeiro.** Leia `references/regras-de-copy.md` (regras herdadas da conteudo-low-ticket + contexto do produto). Se o usuário só deu o tema, escreva a copy completa do carrossel (8–10 slides, funil definido) **e a legenda do post** (1ª linha = gancho independente, corpo, CTA/comando, 3–5 hashtags) e mostre em texto ANTES de renderizar — mais barato iterar em texto que em imagem.
 1b. **Rode o GATE DE FIO CONDUTOR (seção acima) na copy — bloqueante.** Títulos, embaralhamento, constante+variável, lista paga. Copy reprovada não vira JPG: conserte a sequência e só então siga.
-2. **Monte o JSON.** Leia `references/design-system.md` para os tipos de slide e o schema. Mapeie cada slide da copy pro tipo visual certo (capa → gancho2 → pontos/lista/vs/prova → quote → cta). Use os destaques `*verde*` (métrica confiável/decisão) e `~vermelho~` (leitura no escuro/contradição — nunca uma plataforma) com parcimônia — 1 destaque por slide no máximo. **Inclua o campo `"legenda"`** (texto puro, com `\n` entre parágrafos) e, se quiser nome de pasta explícito, o campo `"pasta"` (senão vira `post-<hoje>-<slug>`).
+2. **Antes de montar o JSON, leia as referências nesta ordem:**
+   1. `references/layout-metricas-reais.md` — contrato visual canônico; **prevalece em qualquer conflito visual**;
+   2. `references/design-system.md` — documentação operacional e estado da implementação;
+   3. `references/regras-de-copy.md` — posicionamento e limites da copy.
+
+   **Alvo canônico:** `capa`, `gancho`, `nota`, `lista_progressiva`, `espelho`, `decisao`, `cta`, com um único `accent` por slide.
+
+   > **PENDÊNCIA DE IMPLEMENTAÇÃO:** o renderer atual ainda aceita os tipos legados `capa`, `gancho2`, `ponto`, `lista`, `vs`, `quote`, `prova` e `cta`. O schema canônico e seus sete renderizadores ainda não existem em `scripts/gera_carrossel.py`. Até o rewrite, não envie JSON canônico ao renderer legado como se fosse compatível; faça o mapeamento explícito para os tipos antigos e registre a limitação.
+
+   No JSON compatível com o renderer atual, use `*verde*` para métrica confiável/decisão e `~vermelho~` para leitura no escuro/contradição — nunca para marcar uma plataforma — com no máximo um destaque por slide. **Inclua o campo `"legenda"`** (texto puro, com `\n` entre parágrafos) e, se quiser nome de pasta explícito, o campo `"pasta"` (senão vira `post-<hoje>-<slug>`).
 3. **Renderize.** `python3 scripts/gera_carrossel.py carrossel.json pasta_base/`. O script cria **uma subpasta nova por post** dentro de `pasta_base/`, no padrão N8N: `post-AAAA-MM-DD-<slug>/` com `img-01.jpg`, `img-02.jpg`... (JPG, a ordem numérica = ordem dos slides no Instagram) + `legenda.txt`. As fontes já estão em `assets/fonts/` — não precisa de internet.
 4. **Revise visualmente.** Abra os JPGs (view) e OLHE o resultado antes de entregar: texto cortado? destaque no lugar certo? hierarquia clara? Fundo escuro sem sujeira de compressão? Corrija o JSON e regenere se preciso (o script sufixa `-2`, `-3` se a pasta já existir — não reaproveita pasta antiga).
-5. **Entregue.** Gere direto em `/mnt/user-data/outputs/` (ou zipe a subpasta do post) e apresente. A pasta já está pronta pro N8N: ele detecta a pasta nova → pega `img-01.jpg…` ordenadas + `legenda.txt` → monta a prévia → manda aprovar no WhatsApp → publica. Destino final do Artur no Drive: `G:\Meu Drive\Trafego\Claude\Criativos`. Se a capa tiver `"foto": true`, avise que a zona demarcada é onde entra o recorte PNG dele.
+5. **Entregue.** Gere direto em `/mnt/user-data/outputs/` (ou zipe a subpasta do post) e apresente. A pasta já está pronta pro N8N: ele detecta a pasta nova → pega `img-01.jpg…` ordenadas + `legenda.txt` → monta a prévia → manda aprovar no WhatsApp → publica. Destino final do Artur no Drive: `G:\Meu Drive\Trafego\Claude\Criativos`.
 6. **Salve no Notion.** Crie a página na base "Conteúdo Low Ticket" (ver abaixo) com copy slide a slide, legenda e specs. Status inicial: **Rascunho**.
 
 ---
@@ -155,7 +164,7 @@ Transforma um tema/copy em **carrossel renderizado**: JPGs 1080x1350 com a ident
 
 ## Regras de conduta
 
-- **Texto na imagem é curto.** Título de slide ≤ 12 palavras; corpo ≤ 25 palavras. Se a copy não cabe, corte a copy — o script reduz a fonte, mas fonte pequena mata o carrossel no mobile.
+- **Texto na imagem é curto.** Título de slide ≤ 12 palavras; corpo ≤ 25 palavras. Se a copy não cabe, corte ou divida a copy. O contrato canônico proíbe reduzir o título abaixo de 60 px; o renderer legado ainda auto-reduz fonte e essa divergência fica pendente para o rewrite.
 - **1 ideia por slide, 1 destaque por slide.** Verde = métrica confiável/decisão; vermelho = leitura no escuro/contradição entre fontes. **Nunca pintar uma plataforma de vermelho como inimiga.** Nunca os dois destaques no mesmo trecho.
 - **A plataforma nunca é vilã; nenhuma fonte é a verdade.** Ver a REGRA DE POSICIONAMENTO acima.
 - **Slide 1 carrega 80% do peso.** Hook de 5–8 palavras, específico pro dono de e-commerce. Slide 2 precisa funcionar sozinho (o Instagram reexibe a partir dele).
