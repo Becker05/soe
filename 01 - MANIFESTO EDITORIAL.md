@@ -131,6 +131,14 @@ Todo conteúdo deve responder pelo menos uma destas perguntas:
 
 **Se o conteúdo não muda uma decisão, ele não deve ser publicado.**
 
+## O critério de decisão
+
+Explicar o problema gera concordância. Entregar um critério de decisão gera comportamento. Não basta o conteúdo mostrar *por que* algo acontece — ele precisa entregar uma **regra prática que o dono ou o gestor do e-commerce aplica na próxima decisão**.
+
+Um conteúdo que termina em "entenda como funciona" ainda está explicando. Um conteúdo que termina em "nunca decida X por Y" está ensinando a decidir. A técnica (janela, modelo, atribuição) existe só para justificar a regra — nunca como ponto de chegada.
+
+> Público: falamos com **quem decide o investimento** no e-commerce — seja o dono que toca o próprio tráfego, seja o gestor contratado que precisa de segurança para decidir a verba. Nunca restrinja a linguagem a um único cargo.
+
 ## Princípio da repetição
 
 A marca não busca parecer criativa. Busca parecer consistente.
