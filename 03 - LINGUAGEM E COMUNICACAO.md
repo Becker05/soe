@@ -10,6 +10,13 @@ Consultado por praticamente todos os modos (copywriter, revisor e o diretor de a
 
 Escreva como se explicasse para um dono de e-commerce experiente no negócio, mas não necessariamente especialista em analytics. Se existir uma palavra simples e uma técnica, prefira a simples. Se a palavra técnica for indispensável, explique o impacto antes de explicar o funcionamento.
 
+## Regra de abertura
+
+O conteúdo abre pelo sintoma que o gestor já sente, nunca pela ferramenta ou pelo conceito. O conceito entra depois que a dor está na tela. Base: D-04 (doc 09).
+
+Errado: "Entenda como funciona a atribuição."
+Certo: "A campanha mostra 82 compras. A loja mostra 29."
+
 ## Tabela — ferramenta → comunicação
 
 | Evite como protagonista | Prefira comunicar |
@@ -39,14 +46,30 @@ Escreva como se explicasse para um dono de e-commerce experiente no negócio, ma
 | tracking | rastreamento |
 | mensuração | leitura dos dados *(quando fizer sentido)* |
 
+## Tabela — ganchos
+
+A acusação é o que reprova, independente de quem é acusado. Base: D-01 (doc 09).
+
+| Acusa | Evite | Prefira |
+|---|---|---|
+| Plataforma | "Meta mostra um ROAS, GA4 mostra outro. Quem está mentindo?" | "Meta mostra um ROAS. O GA4 mostra outro. Nenhum dos dois está errado." |
+| Plataforma | "O gerenciador te deu razão." | "O gerenciador respondeu a pergunta dele. Faltou a sua." |
+| Leitor | "Você instalou GA4 duas vezes e chamou o resultado de precisão." | "Duas implementações fazendo o mesmo trabalho podem contar a mesma venda duas vezes." |
+| Leitor | "Você desligou o anúncio errado ontem." | "O anúncio que você desligou ontem pode ter aberto a compra de hoje." |
+| Time do leitor | "Seu time pode estar virando cliente no próprio relatório." | "Pedidos de teste entram no relatório junto com os clientes." |
+| Objeto neutro | "Sua landing page pode estar roubando a origem da campanha." | "Quando a jornada atravessa dois domínios, a origem pode se perder no meio." |
+
+Teste: se o gancho tem um culpado, reescreva com o mecanismo no lugar do culpado.
+
 ## Teste rápido antes de publicar
 
 1. A frase vende **transformação** ou **ferramenta**? (Se ferramenta, reescreva.)
 2. Responde "como isso melhora uma decisão do gestor?"
-3. Ataca alguma plataforma? (Se sim, reescreva — o vilão é decidir sem estrutura.)
-4. Tem sensacionalismo, terrorismo ou promessa irreal? (Se sim, corte.)
-5. Se eu remover o nome da ferramenta, o conteúdo continua fazendo sentido? (Se sim, está bom.)
-6. Este conteúdo faz alguém pensar que sou especialista em GA4 ou em métricas? (Se "GA4", reescreva.)
+3. Tem sensacionalismo, terrorismo ou promessa irreal? (Se sim, corte.)
+4. Se eu remover o nome da ferramenta, o conteúdo continua fazendo sentido? (Se sim, está bom.)
+5. Este conteúdo faz alguém pensar que sou especialista em GA4 ou em métricas? (Se "GA4", reescreva.)
+6. Abre pelo sintoma ou pelo conceito? (Se conceito, reescreva.)
+7. O gancho tem um culpado — plataforma, leitor, time do leitor ou objeto? (Se sim, reescreva com o mecanismo no lugar do culpado.)
 
 ## Assinatura de voz
 
