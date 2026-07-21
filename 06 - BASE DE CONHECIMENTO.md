@@ -12,7 +12,7 @@ O orquestrador abre o índice antes de abrir qualquer verbete. Só verbete `VALI
 | ROAS | VALIDADO |
 | UTM | VALIDADO |
 | (not set) | VALIDADO |
-| _demais temas do roadmap_ | INEXISTENTE — acionar gate (doc 08) |
+| _demais temas da fila_ | INEXISTENTE — acionar gate (doc 08) |
 
 ## Estados possíveis
 
@@ -33,6 +33,8 @@ O orquestrador abre o índice antes de abrir qualquer verbete. Só verbete `VALI
 - **Afirmações proibidas**
 - **Caso / prova**
 - **Fontes ou evidências**
+- **Prova exibível** (sim / não / anonimizada / autorização pendente — se a prova pode aparecer em tela; um caso que só existe como texto não sustenta o framework Vídeo curto do 04B)
+- **Provas já publicadas** (prova · formato · data · contas alcançadas)
 - **Estado** (VALIDADO / EM REVISÃO / RASCUNHO / OBSOLETO — só VALIDADO gera conteúdo)
 - **Última revisão**
 - **Ganchos e ângulos já usados** (gancho literal · tese · analogia · exemplo · formato · data)
@@ -62,6 +64,8 @@ Quando o tema depender de contexto técnico, não transforme uma tendência em r
 - **Afirmações proibidas:** "A Meta mostra influência e o GA4 mostra o fechamento." · "Uma das plataformas está mentindo."
 - **Caso / prova:** Em uma operação analisada, a Meta apresentou 522 compras atribuídas enquanto um relatório do GA4 apresentou 250 compras para o mesmo período. A diferença não prova, por si só, que uma plataforma esteja errada — exige verificar janela, modelo, escopo, período, implementação, deduplicação e dados da loja antes de orientar a decisão. (Registro interno abaixo.)
 - **Fontes ou evidências:** Print/relatório da operação âncora — ver bloco de registro interno.
+- **Prova exibível:** P-03 sim. Caso 522 vs 250 com autorização de uso pendente.
+- **Provas já publicadas:** 567 vs 317 · carrossel · 6 contas alcançadas. ⚠ Número publicado sem origem no Banco de Provas. Verificar procedência ou retirar de circulação.
 - **Estado:** VALIDADO — ressalva: a conclusão "nenhuma está errada" só vale após auditoria da implementação.
 - **Última revisão:** _(preencher na entrada no repo)_
 - **Ganchos e ângulos já usados:** _(vazio)_
@@ -99,6 +103,8 @@ Quando o tema depender de contexto técnico, não transforme uma tendência em r
 - **Afirmações proibidas:** "O ROAS do caixa é o ROAS verdadeiro." · "Existe um único ROAS real."
 - **Caso / prova:** No caso âncora, ROAS de 4,10 (Meta) e 1,91 (relatório GA4 de último clique) na mesma operação — leituras diferentes que só sustentam decisão quando reconciliadas.
 - **Fontes ou evidências:** Mesma operação âncora.
+- **Prova exibível:** P-04 sim.
+- **Provas já publicadas:** "A Meta disse ROAS 4,1. O GA4 disse 1,9" · carrossel · 9 contas alcançadas.
 - **Estado:** VALIDADO
 - **Última revisão:** _(preencher)_
 - **Ganchos e ângulos já usados:** _(vazio)_
@@ -120,6 +126,8 @@ Quando o tema depender de contexto técnico, não transforme uma tendência em r
 - **Afirmações proibidas:** "UTM malformada sempre gera not set."
 - **Caso / prova:** Auditorias reais em que UTMs malformadas eram causa secundária de confusão nos relatórios de origem.
 - **Fontes ou evidências:** _(referenciar auditoria específica ao publicar)_
+- **Prova exibível:** P-02 anonimizada. P-07 sim.
+- **Provas já publicadas:** "Todo mundo trata UTM como detalhe técnico" · carrossel · 4 contas alcançadas.
 - **Estado:** VALIDADO
 - **Última revisão:** _(preencher)_
 - **Ganchos e ângulos já usados:** _(vazio)_
@@ -141,14 +149,35 @@ Quando o tema depender de contexto técnico, não transforme uma tendência em r
 - **Afirmações proibidas:** "Not set = origem não identificada." · "Todo not set é falha do GA4."
 - **Caso / prova:** _(preencher com caso próprio de redução de not set após correção de tracking)_
 - **Fontes ou evidências:** _(preencher)_
+- **Prova exibível:** P-01 parcial, ver ressalva de leitura no patch de casos.
+- **Provas já publicadas:** nenhuma.
 - **Estado:** VALIDADO
 - **Última revisão:** _(preencher)_
 - **Ganchos e ângulos já usados:** _(vazio)_
 
 ---
 
-## Roadmap de verbetes (a construir, mesmo schema)
+## Fila de verbetes
 
-Fila prioritária de conhecimento permanente a documentar: mensuração · rastreamento · GA4 · GTM · server-side · Meta Ads · Google Ads · Pinterest · TikTok · Consent Mode · BigQuery · Looker Studio · pixel · eventos · conversões · direct · organic · referral · cross domain · checkout · revenue · purchase · CAC · CPA · LTV · MER · data-driven · last-click · modelagem · deduplicação · Enhanced Conversions · API de Conversões · Nuvemshop · WooCommerce · Shopify · Loja Integrada.
+Ordem por demanda editorial cruzada com existência de prova. Cada novo verbete segue exatamente o schema acima. Conhecimento temporário não entra como verbete permanente sem passar por Artur — ver doc 07.
 
-Cada novo verbete segue exatamente o schema acima. Conhecimento temporário (mudanças de plataforma) não entra como verbete permanente sem passar por Artur — ver doc 07.
+### T1 — construir primeiro (tem prova ou é extensão de verbete validado)
+
+| Verbete | Base disponível |
+|---|---|
+| Direct | P-01, P-07 |
+| Janela de atribuição | extensão de Atribuição |
+| Deduplicação | adjacente a P-03 |
+| Server-side | conhecimento estável, sem prova própria ainda |
+
+### T2 — demanda alta, sem prova própria (exige auditoria ou caso antes)
+
+Cross-domain · pedidos sem sessão · transaction_id · eventos de funil · parâmetros de item · data layer · tráfego interno · reembolso · novo x recorrente · CAC · CPA · LTV · MER · last-click · modelagem · data-driven · Enhanced Conversions · API de Conversões · organic · referral · checkout · revenue · purchase · pixel · eventos · conversões · mensuração · rastreamento.
+
+### T3 — temporário pelo doc 07, não vira verbete permanente sem aprovação
+
+Consent Mode · Source Group · tráfego de IA · mudanças de plataforma em geral.
+
+### Plataformas e ferramentas
+
+GA4 · GTM · Meta Ads · Google Ads · Pinterest · TikTok · BigQuery · Looker Studio · Nuvemshop · WooCommerce · Shopify · Loja Integrada. Entram como contexto dentro de verbetes conceituais, não como verbete próprio — o Manifesto proíbe a ferramenta como protagonista.
