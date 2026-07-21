@@ -13,11 +13,11 @@ O objetivo do SOE não é produzir conteúdo. É construir uma marca. Todo conte
 
 ```
 /EDITORIAL
-├── 00 - NORTE ESTRATÉGICO.md          ← o coração. 1ª validação de toda peça.
+├── 00 - NORTE ESTRATEGICO.md          ← o coração. 1ª validação de toda peça.
 ├── 01 - MANIFESTO EDITORIAL.md        ← o cérebro. Em conflito, vence.
 ├── 02 - POSICIONAMENTO.md
 ├── 03 - LINGUAGEM E COMUNICAÇÃO.md    ← (ex-Tom de Voz) consultado por quase todos os modos
-├── 04A - FRAMEWORKS ESTRATÉGICOS.md   ← quando usar
+├── 04A - FRAMEWORKS ESTRATEGICOS.md   ← quando usar
 ├── 04B - FRAMEWORKS DE ESCRITA.md     ← como executar
 ├── 05 - AGENTE MESTRE.md              ← instruções do Project
 ├── 06 - BASE DE CONHECIMENTO.md       ← ativo de longo prazo; ler ANTES de escrever
@@ -45,7 +45,7 @@ Ideia → Base de Conhecimento → Estratégia → Framework → Formato e veíc
 
 ## Ordem de prioridade (em caso de conflito)
 
-1. Norte Estratégico
+1. Norte Estrategico
 2. Manifesto
 3. Base de Conhecimento
 4. Linguagem e Comunicação
