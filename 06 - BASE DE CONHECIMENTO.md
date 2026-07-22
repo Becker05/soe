@@ -85,7 +85,54 @@ Quando o tema depender de contexto técnico, não transforme uma tendência em r
 - Fonte do print:
 - Autorização para uso:
 ```
+## Verbete: JANELA DE ATRIBUIÇÃO
+Conceito: Janela de atribuição
+Definição: É o prazo que cada ambiente usa para decidir se uma compra ainda pode ser creditada a um clique ou a uma visualização que aconteceram antes dela.
+Pergunta de negócio respondida: "O prazo de crédito explica a diferença entre os dois números que estou comparando?"
+Impacto no negócio: A janela define quantas compras entram na conta de cada campanha dentro de um relatório. Prazos diferentes produzem contagens diferentes para a mesma operação, sem que uma única venda tenha mudado. Quem compara dois relatórios sem saber o prazo de cada um está comparando contagens feitas com réguas distintas, e decide verba em cima dessa comparação.
+Erro comum: Alterar o prazo de crédito e ler a variação como queda ou alta de vendas. O segundo erro, mais frequente: comparar o número do gerenciador com o de um relatório do GA4 sem verificar qual prazo cada ambiente aplicou naquele recorte.
+Analogia canônica: O prazo combinado de uma comissão de indicação. A loja paga quem indica se a compra acontecer em até sete dias. Se o combinado passa para um dia, parte das comissões deixa de ser paga. As vendas continuam exatamente as mesmas. Mudou quem recebe o crédito, e só isso. (Evitar analogias de relógio adiantado, prazo vencido ou validade estragada. Todas sugerem que existe um prazo correto e os outros estão errados.)
+Decisão que influencia: Escalar, manter ou pausar campanha. Comparar dois períodos da mesma conta. Comparar canais com ciclos de compra diferentes. Definir meta de ROAS ou de CPA por canal — uma meta só se sustenta com o prazo declarado ao lado.
+Objeção frequente + resposta: "Mudei a janela e as vendas caíram pela metade. Então o número anterior estava inflado?" → Os dois números contaram segundo o prazo que receberam. A pergunta útil vem antes: qual prazo corresponde ao ciclo de compra da sua loja e à decisão que você precisa tomar agora. Trocar a janela sem cruzar com pedidos aprovados e receita da loja troca o retrato, não a informação.
+Limitações e exceções: Clique e visualização têm prazos separados e podem ser configurados de forma independente. A janela é um componente do crédito, ao lado do modelo, do escopo, do fuso horário, da deduplicação e da qualidade da implementação — isolar o efeito dela exige manter todo o resto constante. Mudança de configuração costuma valer daqui para frente e não recalcular o histórico do relatório, o que precisa ser validado no ambiente antes de qualquer comparação de período. ⚠ Valores padrão e opções disponíveis mudam ao longo do tempo em qualquer plataforma: nunca afirmar um número de dias sem consultar a documentação oficial na data da publicação.
+Afirmações permitidas:
+"Cada ambiente credita dentro do prazo configurado nele."
+"Uma diferença entre relatórios pode vir do prazo de crédito, e o prazo sozinho não prova erro."
+"Comparar dois números sem saber a janela de cada um é comparar contagens feitas com regras diferentes."
+"Mudar o prazo muda a contagem do relatório. As vendas da loja seguem as mesmas."
+Afirmações proibidas:
+"A janela de X dias é a correta." (não existe prazo verdadeiro)
+"Janela maior infla as vendas." (inflar sugere intenção — viola a regra do vilão)
+"Reduza a janela para ver suas vendas reais."
+"A Meta usa uma janela larga para parecer melhor."
+Qualquer número de dias apresentado como padrão de plataforma sem fonte oficial datada.
+Caso / prova: P-03. Mesma campanha, mesmo período, duas regras de crédito: 82 compras e R$31 mil no gerenciador, 29 compras e R$11 mil no relatório de critério único. O custo apurado foi praticamente idêntico nos dois ambientes, R$4.879 e R$4.881, o que elimina divergência de período, de conta e de recorte. Ressalva de leitura, obrigatória neste verbete: o P-03 não isola a janela. Ele mostra o efeito combinado das regras de crédito, janela e modelo juntos. Aqui ele prova o mecanismo, não o peso específico do prazo. Enquanto não existir um recorte da mesma conta com duas janelas e todo o resto constante, a peça não pode atribuir a diferença de 82 para 29 ao prazo sozinho.
+Fontes ou evidências: Banco de Provas, P-03. (A indexação da aula conflita entre o doc 05 e o patch de casos — pendência 4 do patch, não resolvida aqui.) Documentação oficial da Meta sobre configuração de janela: pendente, ver abaixo.
+Prova exibível: P-03 sim.
+Provas já publicadas: nenhuma.
+Estado: EM REVISÃO — não gera conteúdo até Artur validar. Ver as duas pendências.
+Última revisão: 22/07/2026 (redação inicial)
+Ganchos e ângulos já usados: vazio.
+Pendências que separam este verbete do estado VALIDADO
 
+1. Valores de janela na plataforma. Comportamento atual de plataforma é conhecimento temporário pelo doc 07 e não pode sair do conhecimento interno do modelo. Duas saídas:
+
+(a) Validar o verbete sem os valores. O verbete explica o mecanismo, o erro de leitura e a decisão, e nenhuma afirmação depende de um número de dias. Basta manter a proibição do último item das afirmações proibidas.
+(b) Você autoriza a consulta à documentação oficial da Meta, o campo entra com data de consulta, e o verbete passa a permitir citar configuração específica. Nesse caso vale registrar a data no próprio campo, porque o valor expira.
+
+A rota (a) libera a produção agora. A rota (b) atrasa e entrega um verbete mais completo.
+
+2. Caso que isole a janela. Um recorte da mesma conta, mesmo período, mesma campanha, variando só o prazo de clique. Sem isso, o verbete usa o P-03 com a ressalva registrada acima. Entra como pendência do Banco de Provas, não bloqueia a produção.
+
+Ganchos do banco que passam a ter verbete amarrado
+
+Nenhum gancho da lista EM FILA cita janela. Três LIBERADOS hoje amarrados a Atribuição podem migrar ou duplicar amarração quando este verbete for validado:
+
+"O melhor criativo da jornada pode parecer o pior no último clique." (modelo, não janela — não migrar)
+"Mais dados não consertam uma pergunta mal feita." (serve aos dois)
+"Quatro números que eu reconcilio antes de mexer na verba." (serve aos dois)
+
+Nenhum gancho novo foi criado aqui. Gancho novo entra pelo banco-de-ganchos com estado e verbete amarrado.
 ---
 
 ## Verbete: ROAS
